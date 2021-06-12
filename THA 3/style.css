@@ -1,0 +1,31 @@
+body{
+	margin:0px;
+	padding:0px;
+	background-color:#0B7DEE;
+	height: 150vh;
+}
+.clearfix{clear:both;}
+
+.resume-box{
+		weight:50%px;
+		height:90px;
+		background-color:red;
+}
+
+.box-outer{
+padding:30px;
+}
+
+
+.box-1{
+		background-color:#26252d;
+		width:35%;
+		float:left;
+		height:100px;
+}
+
+.box-2{
+		width:10%;
+		float:left;
+		padding:20px;
+}	
