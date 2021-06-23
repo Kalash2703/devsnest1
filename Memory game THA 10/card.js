@@ -1,0 +1,78 @@
+const cards = document.querySelectorAll('.memory-card');
+var scoreElement = document.querySelector('.score');
+var moveElement = document.querySelector('.move');
+
+var score=0;
+var move=0;
+scoreElement.innerText=score;
+moveElement.innerText=move;
+let hasFlippedCard=false;
+let lockBoard=false;
+let firstCard, secondCard;
+function flipCard() {
+    if(lockBoard) return;
+    if(this === firstCard) return;
+    this.classList.add('flip');
+
+    if(!hasFlippedCard){
+        hasFlippedCard = true;
+        firstCard = this;
+
+        return;
+    }
+       
+    hasFlippedCard=false;
+    secondCard = this;
+
+    checkForMatch();
+
+        
+}
+
+function checkForMatch() {
+    let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+    isMatch ? disableCards() : unflipCards();
+}
+
+function disableCards() {
+    firstCard.removeEventListener('click',flipCard);
+    secondCard.removeEventListener('click',flipCard);
+    resetBoard();
+    score++;
+    move++;
+    scoreElement.innerText=score;
+    moveElement.innerText=move;
+
+}
+
+function unflipCards(){
+    lockBoard= true;
+    move++;
+    scoreElement.innerText=score;
+    moveElement.innerText=move;
+    setTimeout(() =>{
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+       
+
+        resetBoard();
+
+
+        }, 1500);
+        
+
+}
+
+function resetBoard(){
+    [hasFlippedCard,lockBoard]=[false,false];
+    [firstCard,secondCard]=[false,false];
+}
+
+(function shuffle(){
+    cards.forEach(card =>{
+    let randomPos=Math.floor(Math.random()*12);
+    card.style.order = randomPos;
+ });
+})();
+
+cards.forEach(card => card.addEventListener('click',flipCard));
