@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events </title>
+    <link rel="stylesheet" href="Event.css">
+</head>
+<body id="body">
+    <div id="op">
+    <h1 id="h1">HTML EVENTS</h1>
+    <select onchange="changeImage(this.value)">
+        <option value="yellow">yellow</option>
+        <option value="IndianRed">IndianRed</option>
+        <option value="DeepPink">DeepPink</option>
+        <option value="Orchid">Orchid</option>
+        <option value="BlueViolet">BlueViolet</option>
+        <option value="LightSeaGreen">LightSeaGreen</option>
+        <option value="Chocolate">Chocolate</option>
+        <option value="Peru">Peru</option>
+        <option value="RosyBrown">RosyBrown</option>
+    </select><br>
+
+
+    <button  id="btn" onclick="alert('Call onclick event')">Click Event</button><br>
+
+    <button  id="on" onmouseover="alert('Call onmouseover event')">onmousrover</button><br>
+
+    <button  id="out" onmouseout="alert('Call onmouseout event')">onmousrout</button><br>
+
+    <input  id="in" type="text"  name="" onKeydown="color(this.value)" value="">
+    </div>
+    <script>
+        function changeImage(color){
+            document.getElementById('body').style.background=color;
+        }
+
+
+        function color(y){
+            document.getElementById('h1').style.color=y; 
+        }
+    </script>
+</body>
+</html>

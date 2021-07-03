@@ -1,0 +1,32 @@
+#op{
+    position:absolute;
+    top:center;
+    left:40%;
+    bottom:30%;
+    height:30%;
+    width:20%;
+}
+
+#btn{
+    position:relative;
+    top:10%;
+}
+
+#on{
+    position:relative;
+    top:20%;
+}
+
+#out{
+    position:relative;
+    top:30%;
+}
+
+#in{
+    position:relative;
+    top:40%;
+}
+
+body{
+    background-color:crimson;
+}
