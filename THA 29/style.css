@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.App {
+  height:190vh;
+  font-family: sans-serif;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background-image:url("https://images.all-free-download.com/images/graphiclarge/weather_background_cute_stylized_icons_decor_6835599.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  color:white;
+}
+.App.dark{
+  background-image:url("https://media.istockphoto.com/vectors/seamless-vector-pattern-with-cartoon-weather-on-dark-blue-background-vector-id1321299588?b=1&k=6&m=1321299588&s=612x612&w=0&h=RXTyLCMu80o3DHyowryGxsFOyPpHopm4uFaJPez9Yn0=");
+  background-repeat:no-repeat;
+  background-size:cover;
+  
+}
+.form{
+  margin-top: 100px;
+  display:flex;
+  justify-content: center;
+}
+.form input{
+  padding:0px 10px;
+}
+.form button{
+  margin:0px 10px;
+}
+.weather{
+  text-align: center;
+}
+.card{
+  height:90%;
+  width:190%;
+  margin-left:-35%;
+  margin-top:30px;
+  border-radius: 4px;
+  box-shadow:
+  rgb(0, 102, 128) 0px 0px 0px 10px,
+  rgb(0, 102, 128) 0px 1px 0px 0px,
+  rgb(0, 102, 128) 0px 0px 8px 0px,
+  rgb(0, 102, 128) 0px 0px 0px 0px;
+  
+  background-color: rgb(0, 204, 255);
+}
+.card.dark{
+  background-color: rgb(27,27,27);
+  color:white;
+}
+.card h2{
+  position:relative;
+  top:20%;
+}
+.card img{
+  width:30%;
+  margin-top:20px;
+}
+
+.card .place{
+  font-size: 1.2rem;
+  font-weight:500;
+  text-shadow: 2px 2px rgb(0, 102, 153);
+  opacity:0.8;
+  margin: 10px 0px;
+}
+.card .temp{
+  font-size:4rem;
+  text-shadow: 2px 2px rgb(0, 102, 153);
+  margin-left: 30px;
+  font-weight:500;
+}
+.card .desc{
+  font-size:0.8rem;
+  font-weight:500;
+  text-shadow: 2px 2px rgb(0, 102, 153);
+}
+.whp{
+  margin: 20px 0px;
+  text-shadow: 2px 2px rgb(0, 102, 153);
+}
+.whp .title{
+  font-size: 0.8rem;
+}
+.whp .data{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.whp .data .unit{
+  font-size: 0.8rem;
+}
+
+.toogle-theme{
+  position:fixed;
+  top:10px;
+  right:10px;
+}
